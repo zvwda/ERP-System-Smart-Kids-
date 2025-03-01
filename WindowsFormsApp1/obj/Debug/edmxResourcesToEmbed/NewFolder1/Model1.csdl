@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="smartkidsdbModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="price" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="notes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="supplier">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="combany" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="active" Type="Boolean" />
+    <Property Name="image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="combany" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="active" Type="Boolean" />
+    <Property Name="image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="smartkidsdbEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="category" EntityType="Self.category" />
+    <EntitySet Name="product" EntityType="Self.product" />
+    <EntitySet Name="supplier" EntityType="Self.supplier" />
+    <EntitySet Name="users" EntityType="Self.users" />
+    <EntitySet Name="customer" EntityType="Self.customer" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{34C58C96-E4DD-4FD0-A13C-C686FAA7DD90}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cust\custmanage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cust\custmanage.Designer.cs">
+      <DependentUpon>custmanage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\category.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\customer.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\fatora.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\fatora2.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model1.Context1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DB\mozaf.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\product.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\supplier.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\users.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="screens\newUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\newUser.Designer.cs">
+      <DependentUpon>newUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="screens\products\productclass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\products\productclass.Designer.cs">
+      <DependentUpon>productclass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="screens\products\productlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\products\productlist.Designer.cs">
+      <DependentUpon>productlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="smartkidsdbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>smartkidsdbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="smartkidsdbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>smartkidsdbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="smartkidsdbDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>smartkidsdbDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sub\submanage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sub\submanage.Designer.cs">
+      <DependentUpon>submanage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="الفواتير\فاتورة.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الفواتير\فاتورة.Designer.cs">
+      <DependentUpon>فاتورة.cs</DependentUpon>
+    </Compile>
+    <Compile Include="الفواتير\مشتريات.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الفواتير\مشتريات.Designer.cs">
+      <DependentUpon>مشتريات.cs</DependentUpon>
+    </Compile>
+    <Compile Include="الموظفين\الموظفون.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الموظفين\الموظفون.Designer.cs">
+      <DependentUpon>الموظفون.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="cust\custmanage.resx">
+      <DependentUpon>custmanage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="screens\newUser.resx">
+      <DependentUpon>newUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screens\products\productclass.resx">
+      <DependentUpon>productclass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screens\products\productlist.resx">
+      <DependentUpon>productlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sub\submanage.resx">
+      <DependentUpon>submanage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الفواتير\فاتورة.resx">
+      <DependentUpon>فاتورة.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الفواتير\مشتريات.resx">
+      <DependentUpon>مشتريات.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الموظفين\الموظفون.resx">
+      <DependentUpon>الموظفون.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="DB\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model11.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DB\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="smartkidsdbDataSet.xsc">
+      <DependentUpon>smartkidsdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="smartkidsdbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>smartkidsdbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="smartkidsdbDataSet.xss">
+      <DependentUpon>smartkidsdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="smartkidsdbDataSet1.xsc">
+      <DependentUpon>smartkidsdbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="smartkidsdbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>smartkidsdbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="smartkidsdbDataSet1.xss">
+      <DependentUpon>smartkidsdbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="smartkidsdbDataSet2.xsc">
+      <DependentUpon>smartkidsdbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="smartkidsdbDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>smartkidsdbDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="smartkidsdbDataSet2.xss">
+      <DependentUpon>smartkidsdbDataSet2.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context1.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="الفواتير\i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+</Project>

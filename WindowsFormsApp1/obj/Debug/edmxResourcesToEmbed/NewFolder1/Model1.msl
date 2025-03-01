@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="smartkidsdbModel1StoreContainer" CdmEntityContainer="smartkidsdbEntities1">
+    <EntitySetMapping Name="category">
+      <EntityTypeMapping TypeName="smartkidsdbModel1.category">
+        <MappingFragment StoreEntitySet="category">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="product">
+      <EntityTypeMapping TypeName="smartkidsdbModel1.product">
+        <MappingFragment StoreEntitySet="product">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="supplier">
+      <EntityTypeMapping TypeName="smartkidsdbModel1.supplier">
+        <MappingFragment StoreEntitySet="supplier">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="combany" ColumnName="combany" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="smartkidsdbModel1.users">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customer">
+      <EntityTypeMapping TypeName="smartkidsdbModel1.customer">
+        <MappingFragment StoreEntitySet="customer">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="combany" ColumnName="combany" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
